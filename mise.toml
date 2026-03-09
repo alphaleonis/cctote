@@ -1,0 +1,46 @@
+[tools]
+golangci-lint = "latest"
+
+[tasks.build]
+description = "Build the cctote binary"
+run = "go build ."
+
+[tasks.test]
+description = "Run all tests"
+run = "go test ./..."
+
+[tasks.lint]
+description = "Run linter"
+run = "golangci-lint run ./..."
+
+[tasks.fmt]
+description = "Format Go source files"
+run = "gofmt -w ."
+
+[tasks.install]
+description = "Install cctote to GOBIN/GOPATH"
+run = "go install ."
+
+[tasks.clean]
+description = "Remove build artifacts"
+run = "go clean ."
+
+[tasks.coverage]
+description = "Run tests and enforce per-package coverage thresholds"
+run = "./scripts/check-coverage.sh"
+
+[tasks.licenses]
+description = "Collect third-party dependency licenses"
+run = "go-licenses save ./... --save_path=./third_party_licenses --force --ignore github.com/alphaleonis/cctote"
+
+[tasks.build-linux]
+description = "Cross-compile for Linux"
+env.GOOS = "linux"
+env.GOARCH = "amd64"
+run = "go build -o cctote-linux ."
+
+[tasks.build-windows]
+description = "Cross-compile for Windows"
+env.GOOS = "windows"
+env.GOARCH = "amd64"
+run = "go build -o cctote.exe ."

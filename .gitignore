@@ -1,0 +1,34 @@
+# Build output
+/cctote
+/cctote.exe
+dist/
+
+# IDE
+.vs/
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Claude Code
+.claude/settings.local.json
+
+# Coverage
+coverage.out
+coverage.xml
+
+# Code reviews
+.code-reviews/
+.refactoring-plans/
+
+# Issue tracking (private repo)
+.beans/
+
+# Third-party licenses (generated at release time)
+third_party_licenses/
+
+# Misc
+*.log

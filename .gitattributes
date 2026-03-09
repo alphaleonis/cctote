@@ -1,0 +1,21 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Source code
+*.go text diff=golang
+
+# Scripts
+*.sh text eol=lf
+
+# Documentation
+*.md text
+
+# Config
+*.json text
+*.yaml text
+*.yml text
+*.toml text
+
+# Go module files
+go.mod text
+go.sum text
