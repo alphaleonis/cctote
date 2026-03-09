@@ -27,7 +27,8 @@ coverage.xml
 # Issue tracking (private repo)
 .beans/
 
-# Third-party licenses (generated at release time)
+# Release artifacts (generated at release time)
+release-notes.md
 third_party_licenses/
 
 # Misc
