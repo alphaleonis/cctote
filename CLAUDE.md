@@ -18,6 +18,10 @@ go test ./internal/manifest/ -run TestRoundTrip  # single test
 ./cctote tui            # launch the TUI after building
 ```
 
+## Releasing
+
+Releases use `gh workflow run release.yml -f version=vX.Y.Z`. GoReleaser builds binaries and creates a draft GitHub release. Third-party licenses are bundled via `go-licenses`. See `RELEASING.md` for full steps.
+
 ## Architecture
 
 ```
@@ -96,6 +100,7 @@ cd .beans && git add -A && git commit -m "..." && git push && cd ..
 
 ## Workflow
 
+- Work on the `dev` branch; merge to `main` via PR (branch protection requires CI + 1 review)
 - Run `mise run lint` before committing and fix any errors in changed code
 - Involve the user in plan building — ask for clarifications or decisions (with suggestions) rather than assuming
 - When a task has multiple valid approaches, present options with trade-offs before proceeding
