@@ -3,6 +3,7 @@ version: 2
 before:
   hooks:
     - go-licenses save ./... --save_path=./third_party_licenses --force --ignore github.com/alphaleonis/cctote
+    - bash -c "go-licenses report ./... --ignore github.com/alphaleonis/cctote > ./third_party_licenses/NOTICES.csv 2>/dev/null"
 
 builds:
   - env:
@@ -26,8 +27,8 @@ archives:
     files:
       - LICENSE
       - src: ./third_party_licenses/**/*
-        dst: third_party_licenses
-        strip_parent: true
+        dst: .
+        strip_parent: false
 
 release:
   draft: true
