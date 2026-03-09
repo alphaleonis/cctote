@@ -85,7 +85,8 @@ claude plugin marketplace add / list
 
 ## Issue Tracking
 
-This project uses [beans](https://github.com/benpueschel/beans) for issue tracking. Issues are stored in `.beans/` and managed via the `beans` CLI. Use `beans` instead of TodoWrite for all work tracking.
+- **GitHub Issues** — public-facing bug reports and feature requests
+- **beans** — internal task tracking via [beans](https://github.com/benpueschel/beans). Use `beans` instead of TodoWrite for internal work tracking.
 
 `.beans/` is a separate private git repo (`alphaleonis/cctote-beans`). Bean changes are **not** tracked by the main repo. After creating or updating beans, commit and push inside `.beans/`:
 
