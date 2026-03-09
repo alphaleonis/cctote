@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## Unreleased
 
+## v0.1.0-alpha.1
+
 ### Added
 - CLI commands: `mcp`, `plugin`, `marketplace`, `profile`, `diff`, `config`, `version`
 - TUI mode with sync dashboard for import/export/diff operations
@@ -18,3 +20,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - Enable/disable support for plugins and MCP servers
 - Project-scope MCP server support (`.mcp.json`)
 - Copy-as-JSON for MCP server definitions in TUI
+- GitHub Actions CI and release workflows
+- Third-party license packaging in release archives
