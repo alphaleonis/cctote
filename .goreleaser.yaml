@@ -2,7 +2,7 @@ version: 2
 
 before:
   hooks:
-    - go-licenses save ./... --save_path=./dist/third_party_licenses --force --ignore github.com/alphaleonis/cctote
+    - go-licenses save ./... --save_path=./third_party_licenses --force --ignore github.com/alphaleonis/cctote
 
 builds:
   - env:
@@ -25,7 +25,7 @@ archives:
           - zip
     files:
       - LICENSE
-      - src: ./dist/third_party_licenses/**/*
+      - src: ./third_party_licenses/**/*
         dst: third_party_licenses
         strip_parent: true
 
