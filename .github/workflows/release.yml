@@ -78,3 +78,7 @@ jobs:
           args: release --clean --release-notes=release-notes.md
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Delete tag on failure
+        if: failure()
+        run: git push origin --delete "${{ inputs.version }}" || true
